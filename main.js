@@ -26,7 +26,8 @@
 };
 $(function(){
 	query('taipei');
-//	$('li').on('click',function(){
-
-//	})
+	$('#dropdown li').on('click', function(){
+    $('button').text($(this).text());
+    query($(this).text());
+});
 });
