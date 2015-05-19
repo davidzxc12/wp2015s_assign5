@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Weather</title>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
   <link href="mycss.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -13,22 +13,40 @@
     <div class="col-xs-6">
       <!-- Large button group -->
       <div class="btn-group">
-        <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+        <button id="menu" class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
           Taipei <span class="caret"></span>
         </button>
-        <ul id="dropdown" class="dropdown-menu" role="menu">
+        <ul id="dropdown" class="dropdown-menu" role="menu" aria-labelledby="menu">
               <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Taipei</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">New Taipei</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Taichung</a></li>
               <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Tainan</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Kaohsiung</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Keelung</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Taoyuan</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Hsinchu</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Hsinchu County</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Miaoli county</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Changhua county</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nantou county</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Yunlin county</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Chiayi city</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Chiayi county</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pingtung County</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Yilan county</a></li>
               <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Hualien</a></li>
               <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Taidong</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Penghu county</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Kinmen County,</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lianjiang county</a></li>
         </ul>
       </div>
-      <div><span class="temperature">23</span> &#8451;</div>
+      <div><span class="temperature"></span> &#8451;</div>
     </div>
     <div class="col-xs-6">
       <canvas id="today" width="100" height="100"></canvas>
       <div class="condition">
-          <span class="date">4 May 2015</span>: Mostly Cloudy
+          <span class="date"></span><span class="status"></span>
       </div>
     </div>
   </div>
@@ -48,7 +66,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr class="forecast_temp">
                   <td>17-23 &#8451;</td>
                   <td>18-26 &#8451;</td>
                   <td>15-24 &#8451;</td>
@@ -66,9 +84,10 @@
   
 </div>
 
-<script src="//code.jquery.com/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
-<script src="//darkskyapp.github.io/skycons/skycons.js"></script>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+<script src="https://darkskyapp.github.io/skycons/skycons.js"></script>
 <script src="myapp.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
